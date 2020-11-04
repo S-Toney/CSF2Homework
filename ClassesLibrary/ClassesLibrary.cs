@@ -110,7 +110,42 @@ namespace ClassesLibrary
         }
     }//end Vehicle
 
+    public class Login
+    {
+        //field
+        private string _userName;
+        private string _password;
 
+        //properties
+        public string UserName
+        {
+            get { return _userName; }
+            set { _userName = value; }
+        }
+        public string Password
+        {
+            get { return _password; }
+            set { _password = value; }
+        }
+        //ctors
+        //FULLY QUALIFIED CTOR
+        public Login(string username, string password)
+        {
+            UserName = username;
+            Password = password;
+        }
+
+        //DEFAULT
+        public Login() { }
+
+        //methods
+        public override string ToString()
+        {
+            return string.Format($"\n-*-*-*- LOGIN CREDENTIALS -*-*-*-\n\n" +
+                $"Username: {UserName}\n" +
+                $"Password: {Password}\n\n");
+        }
+    }//end Login
 
 }
 
